@@ -77,21 +77,21 @@ OUTPUT_PDF_PATH = 'data/output/output.pdf'
 
 ## Single File Upload
 
-1. **Select a PDF file to upload.**
-2. **Choose the language of the PDF.**
-3. **Optionally, enter custom sensitive words/patterns separated by commas.**
-4. **Click "Upload".**
+1. Select a PDF file to upload.
+2. Choose the language of the PDF.
+3. Optionally, enter custom sensitive words/patterns separated by commas.
+4. Click "Upload".
 
 ## Multiple Files Upload
 
-1. **Select multiple PDF files to upload.**
-2. **Choose the language of the PDFs.**
-3. **Optionally, enter custom sensitive words/patterns separated by commas.**
-4. **Click "Upload Multiple".**
+1. Select multiple PDF files to upload.
+2. Choose the language of the PDFs.
+3. Optionally, enter custom sensitive words/patterns separated by commas.
+4. Click "Upload Multiple".
 
 ## Reports
 
-- **After processing, detailed reports showing the deleted words and their locations will be generated and saved in the `reports` directory.**
+- After processing, detailed reports showing the deleted words and their locations will be generated and saved in the `reports` directory.
 
 ## Troubleshooting
 
