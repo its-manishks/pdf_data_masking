@@ -90,6 +90,11 @@ OUTPUT_PDF_PATH = 'data/output/output.pdf'
 - Ensure Tesseract is installed and added to your system's PATH.
 - Verify that all required Python packages are installed using `pip list`.
 
+- ## Authors
+
+- [*Manish Kumar*](https://github.com/its-manishks)
+- [*Sivaram Vinod*](https://github.com/sivaram-vinod)
+
 
 
 
