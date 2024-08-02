@@ -1,64 +1,105 @@
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgbYYh8q-lJnFL5XQjAegR-KdCTFmJz80MFQ&s" height=80>
+
 # PDF Data Masking Application
 
-## Objective
-Develop a robust application that masks sensitive information from input PDFs, ensuring data privacy and security. The application must handle text and images within the PDF, accommodating diverse names across different demographics, including Malaysian, Chinese, and Korean names.
-
-## Requirements
-- Input: PDF files containing customer-sensitive information such as names, phone numbers, email addresses, and clinic names.
-- Output: A new PDF file with all sensitive information masked or removed.
+This application provides functionality to detect and remove sensitive information from PDF files. It supports multiple languages and can process multiple PDFs simultaneously. The application also generates detailed reports showing which words were deleted and their locations.
 
 ## Features
-1. Text Extraction and Masking
-2. Image Processing
-3. Multi-language Support
-4. Performance
-   - Efficient processing to handle large PDFs and multiple files simultaneously.
-   - Ensure accuracy in identifying and masking sensitive information.
-5. API Integration (Gemini API)
-6. Frontend for file upload and download
 
-## Technologies Used
-- Python
-- PyPDF2
-- pdfminer.six
-- Pillow
-- pytesseract
-- opencv-python
-- pandas
-- langdetect
-- spaCy
-- Flask
-- requests
-- fitz
+- **Sensitive Information Detection**: Uses OCR and Named Entity Recognition to detect sensitive information such as names, phone numbers, and email addresses.
+- **Multilingual Support**: Supports English, Simplified Chinese, Traditional Chinese, and Korean.
+- **Batch Processing**: Can process multiple PDF files at once.
+- **Detailed Reports**: Generates a detailed report after processing, showing which words were deleted and their locations.
+- **Real-time Progress Updates**: Provides real-time progress updates for batch processing using Socket.IO.
+
+## Prerequisites
+
+1. **Python 3.7+**
+2. **pip** (Python package installer)
+3. **Tesseract OCR**: Install Tesseract OCR from [here](https://github.com/tesseract-ocr/tesseract).
+4. **Poppler**: Install Poppler from [here](http://blog.alivate.com.au/poppler-windows/).
+
+Ensure that Tesseract and Poppler are added to your system's PATH.
 
 ## Installation
-1. Clone the repository.
-2. Create a virtual environment and activate it:
-    ```sh
-    python -m venv env
-    source env\Scripts\activate
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/pdf-data-masking.git
+    cd pdf-data-masking
     ```
-3. Install the required libraries:
-    ```sh
+
+2. **Create a virtual environment**:
+    ```bash
+    python -m venv env
+    ```
+
+3. **Activate the virtual environment**:
+    - On Windows:
+        ```bash
+        .\env\Scripts\activate
+        ```
+    - On macOS/Linux:
+        ```bash
+        source env/bin/activate
+        ```
+
+4. **Install the required packages**:
+    ```bash
     pip install -r requirements.txt
     ```
-4. Download the spaCy model:
-    ```sh
-    python -m spacy download en_core_web_sm
-    ```
 
-## Usage
-1. Start the Flask application:
-    ```sh
-    python src/app.py
+5. **Create necessary directories**:
+    ```bash
+    mkdir data
+    mkdir data/input
+    mkdir data/output
+    mkdir reports
     ```
-2. Open a web browser and go to `http://127.0.0.1:5000`.
-3. Upload a PDF file and download the processed file.
 
 ## Configuration
-- The paths for the input and output PDF files are configured in `src/config.py`.
 
-## Deliverables
-1. Source code of the application.
-2. Documentation on how to set up and run the application.
-3. A demo video showing the application in action.
+Create a `config.py` file in the `src` directory with the following content:
+
+```python
+INPUT_PDF_PATH = 'data/input/input.pdf'
+OUTPUT_PDF_PATH = 'data/output/output.pdf'
+```
+
+## Running the Application
+
+1. **Run the Flask application:**:
+    ```bash
+    python src/app.py
+    ```
+2. **Open your web browser and navigate to http://127.0.0.1:5000**
+
+## Usage
+
+## Single File Upload
+
+1. **Select a PDF file to upload.**
+2. **Choose the language of the PDF.**
+3. **Optionally, enter custom sensitive words/patterns separated by commas.**
+4. **Click "Upload".**
+
+## Multiple Files Upload
+
+1. **Select multiple PDF files to upload.**
+2. **Choose the language of the PDFs.**
+3. **Optionally, enter custom sensitive words/patterns separated by commas.**
+4. **Click "Upload Multiple".**
+
+## Reports
+
+- **After processing, detailed reports showing the deleted words and their locations will be generated and saved in the `reports` directory.**
+
+## Troubleshooting
+
+- Ensure Tesseract and Poppler are installed and added to your system's PATH.
+- Verify that all required Python packages are installed using `pip list`.
+
+
+
+
+
