@@ -17,9 +17,8 @@ This application provides functionality to detect and remove sensitive informati
 1. **Python 3.7+**
 2. **pip** (Python package installer)
 3. **Tesseract OCR**: Install Tesseract OCR from [here](https://github.com/tesseract-ocr/tesseract).
-4. **Poppler**: Install Poppler from [here](http://blog.alivate.com.au/poppler-windows/).
 
-Ensure that Tesseract and Poppler are added to your system's PATH.
+Ensure that Tesseract is added to your system's PATH.
 
 ## Installation
 
@@ -96,7 +95,7 @@ OUTPUT_PDF_PATH = 'data/output/output.pdf'
 
 ## Troubleshooting
 
-- Ensure Tesseract and Poppler are installed and added to your system's PATH.
+- Ensure Tesseract is installed and added to your system's PATH.
 - Verify that all required Python packages are installed using `pip list`.
 
 
