@@ -92,8 +92,8 @@ OUTPUT_PDF_PATH = 'data/output/output.pdf'
 
 - ## Authors
 
-- [*Manish Kumar*](https://github.com/its-manishks)
-- [*Sivaram Vinod*](https://github.com/sivaram-vinod)
+- [**Manish Kumar**](https://github.com/its-manishks)
+- [**Sivaram Vinod**](https://github.com/sivaram-vinod)
 
 
 
