@@ -1,0 +1,11 @@
+PyPDF2
+pdfminer.six
+Pillow
+pytesseract
+opencv-python
+pandas
+langdetect
+spacy
+flask
+requests
+PyMuPDF

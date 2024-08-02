@@ -1,0 +1,4 @@
+Deleted Words Report
+=====================
+Deleted 'Manish' at (234, 367, 62, 16)
+Deleted 'Kumar' at (310, 367, 57, 16)
