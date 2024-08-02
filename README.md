@@ -48,14 +48,6 @@ Ensure that Tesseract is added to your system's PATH.
     pip install -r requirements.txt
     ```
 
-5. **Create necessary directories**:
-    ```bash
-    mkdir data
-    mkdir data/input
-    mkdir data/output
-    mkdir reports
-    ```
-
 ## Configuration
 
 Create a `config.py` file in the `src` directory with the following content:
