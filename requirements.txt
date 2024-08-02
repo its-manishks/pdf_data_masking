@@ -9,3 +9,5 @@ spacy
 flask
 requests
 PyMuPDF
+flask-socketio
+spacy>=3.0.0
